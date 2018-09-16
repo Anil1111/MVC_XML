@@ -1,0 +1,51 @@
+﻿@model XmlApp.Models.CountryModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    {
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <th colspan="2" align="center">Add country to XML file:</th>
+            </tr>
+            <tr>
+                <td>CountryName: </td>
+                <td>
+                    @Html.TextBoxFor(m => m.CountryName)
+                </td>
+            </tr>
+            <tr>
+                <td>Capital: </td>
+                <td>
+                    @Html.TextBoxFor(m => m.Capital)
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Submit" /></td>
+            </tr>
+        </table>
+    }
+        <div>
+            <ul>
+                @if (ViewBag.listToDisplay != null)
+                {
+                    for (int i = 0; i < ViewBag.listToDisplay.Count / 2; i++)
+                    {
+                <li>@Html.Raw(i+1 + ". " + ViewBag.listToDisplay[i*2 + 1] + " - " + ViewBag.listToDisplay[i*2]+ "\n")</li>
+                    } 
+                }
+            </ul>
+        </div>
+</body>
+</html>
