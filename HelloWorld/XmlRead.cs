@@ -11,12 +11,12 @@ namespace XmlCoutriesApp
         List<string> capitalNamesList = new List<string>();
         List<string> fullList = new List<string>();
 
-        public List<string> ReadXml()
+        public List<string> ReadXml(string _xmlPath)
         {
-            if (File.Exists("C:\\CountriesInfo.xml"))
+            if (File.Exists(_xmlPath))
             {
                 XmlDocument oXmlDocument = new XmlDocument();
-                oXmlDocument.Load("C:\\CountriesInfo.xml");
+                oXmlDocument.Load(_xmlPath);
                 XmlNodeList oCountryNodesList = oXmlDocument.GetElementsByTagName("Country");
                 //Console.WriteLine("Countries saved in database: ");
                 int countriesCount = oCountryNodesList.Count;

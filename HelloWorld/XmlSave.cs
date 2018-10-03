@@ -8,20 +8,20 @@ namespace XmlCoutriesApp
 {
     class XmlSave
     {
-        string countryName, capitalName;
+        private string countryName, capitalName;
         public XmlSave(string country, string capital)
         {
             countryName = country;
             capitalName = capital;
         }
-        public void SaveDataToXmlFile()
+        public void SaveDataToXmlFile(string _xmlPath)
         {
-            if (!File.Exists("C:\\CountriesInfo.xml"))
+            if (!File.Exists(_xmlPath))
             {
                 XmlWriterSettings xmlWriterSettings = new XmlWriterSettings();
                 xmlWriterSettings.Indent = true;
                 xmlWriterSettings.NewLineOnAttributes = true;
-                using (XmlWriter xmlWriter = XmlWriter.Create("C:\\CountriesInfo.xml", xmlWriterSettings))
+                using (XmlWriter xmlWriter = XmlWriter.Create(_xmlPath, xmlWriterSettings))
                 {
                     xmlWriter.WriteStartDocument();
                     xmlWriter.WriteStartElement("CountriesDataBase");
@@ -37,7 +37,7 @@ namespace XmlCoutriesApp
             }
             else
             {
-                XDocument xDocument = XDocument.Load("C:\\CountriesInfo.xml");
+                XDocument xDocument = XDocument.Load(_xmlPath);
                 XElement root = xDocument.Element("CountriesDataBase");
                 IEnumerable<XElement> rows = root.Descendants("Country");
                 XElement firstRow = rows.First();
@@ -45,7 +45,7 @@ namespace XmlCoutriesApp
                    new XElement("Country",
                    new XElement("CountryName", countryName),
                    new XElement("CapitalName", capitalName)));
-                xDocument.Save("C:\\CountriesInfo.xml");
+                xDocument.Save(_xmlPath);
             }
         }
     }

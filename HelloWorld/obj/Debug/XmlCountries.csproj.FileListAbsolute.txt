@@ -30,10 +30,10 @@ C:\Users\rescodev\Desktop\XmlCoutriesApp\HelloWorld\bin\System.Web.Webpages.Depl
 C:\Users\rescodev\Desktop\XmlCoutriesApp\HelloWorld\bin\System.Web.Webpages.Razor.xml
 C:\Users\rescodev\Desktop\XmlCoutriesApp\HelloWorld\bin\System.Web.Helpers.xml
 C:\Users\rescodev\Desktop\XmlCoutriesApp\HelloWorld\bin\System.Web.Mvc.xml
-C:\Users\rescodev\Desktop\XmlCoutriesApp\HelloWorld\obj\Debug\XmlCountries.csprojResolveAssemblyReference.cache
 C:\Users\rescodev\Desktop\XmlCoutriesApp\HelloWorld\obj\Debug\XmlCountries.csproj.CoreCompileInputs.cache
 C:\Users\rescodev\Desktop\XmlCoutriesApp\HelloWorld\bin\HelloWorld.dll.config
 C:\Users\rescodev\Desktop\XmlCoutriesApp\HelloWorld\bin\HelloWorld.dll
 C:\Users\rescodev\Desktop\XmlCoutriesApp\HelloWorld\bin\HelloWorld.pdb
 C:\Users\rescodev\Desktop\XmlCoutriesApp\HelloWorld\obj\Debug\HelloWorld.dll
 C:\Users\rescodev\Desktop\XmlCoutriesApp\HelloWorld\obj\Debug\HelloWorld.pdb
+C:\Users\rescodev\Desktop\XmlCoutriesApp\HelloWorld\obj\Debug\XmlCountries.csproj.CopyComplete

@@ -19,8 +19,8 @@ namespace XmlCoutriesApp.Controllers
         {
             string countryName = country.CountryName;
             string capital = country.Capital;
-            var ob1 = new Program();
-            listToDisplay = ob1.Main(countryName, capital);
+            var mainObject = new Program();
+            listToDisplay = mainObject.Main(countryName, capital);
             for (int i = 0; i < listToDisplay.Count/2; i++)
             {
                 ViewBag.listToDisplay = listToDisplay;
